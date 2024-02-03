@@ -1,0 +1,99 @@
+/*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value  "etgah el content ele gwa el flex
+  - flex-wrap: nowrap => Default Value      "bt7dd eza k
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+
+  justify content : btwz3 el 3nasr btre2a ofokia.
+  align-item : btwz3 el 3nasr btre2a 3rdia. 
+
+  align-content : NFS EL ALIGN ITEm bs el far2 eno byt3aml m3 el content kolo loksha wa7da msh kol items lw7dha 
+
+
+  for child:
+  flex-basis: nfs el width bs byt3aml m3 el width we hieght 3la 7asb el direction (column aw row )
+
+  el inline-felx :nfs el flex bs btkhle el 3ansr tege gamb b3dha 
+  align self 
+
+
+
+
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin: auto;
+    border: 2px solid red;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.flex div {
+    padding: 50px;
+}
+
+
+/* Grid 
+
+grid-template-columns :repeat( 5 ,300px) "hy3ml 5 column kol column 300px
+column gap : px
+row-gap : px
+
+
+child: 
+
+grid-column :el column hybd2 mnen we hynthe fen : span 4 | 1/5   keda hyakhod mkan 4 a3mda   (zay el col sapn ele fe el table)
+grid-column : 2/span 4 hybd2 mn el column el tani we yakhod mkan 4 a3mda we hykhli el column el awl ofset (mkan fadi)
+^
+
+grid-column-start: 
+grid-column-end: 
+
+
+grid row
+
+minmax stronger than fraction
+
+
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.page {
+    display: grid;
+    height: 100vh;
+    background-color: #eee;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo logo nav nav nav nav nav nav nav nav";
+
+}
+
+h2 {
+    grid-area: logo;
+}
+
+nav {
+    grid-area: nav;
+    background-color: beige;
+    align-content: space-around;
+}
